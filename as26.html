@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title"> THIS IS THE TITLE OF THE PAGE</h1>
+    <h1 id='time'>THE TIME IS:</h1>
+    <button id="dark">DARK MODE</button>
+    <script>
+       const x=prompt("HEY!WHAT IS YOUR NAME?","anonymous")
+       const t=document.getElementById("title")
+       t.innerText=`WELCOME TO THE PAGE ${x}`
+       const ctime=document.getElementById("time")
+function clock() {
+    let data=new Date();
+    let time=data.toLocaleTimeString();
+    ctime.innerText=time;
+    
+}
+clock();
+
+//clock
+setInterval((clock),1000);
+
+const dmode=document.getElementById("dark")
+dmode.classList.toggle(onclick);
+dmode.onclick=function changeColor() {
+    setTimeout(() => {
+        document.body.style.backgroundColor='black';
+        document.body.style.color="white"
+        document.body.style.fontFamily="algerian"
+    }, 3000);
+    
+}
+
+
+    </script>
+</body>
+</html>
